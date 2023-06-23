@@ -1,9 +1,14 @@
 # Introduction to Bias and Variance
-All ML models have a tradeoff between minimizing bias and variance factors, both prediction errors. To build an accurate model, we must first understand the meanings of these terms
+All ML models have a tradeoff between minimizing bias and variance factors, both prediction errors. To build an accurate model, we must first understand the meanings of these terms and then learn how they correlate to each other.
 ### Bias
-Models with lots of bias pay little attention to the training data causing them to output errors on both the test and training data. Underfitting usually occurs in these scenarios where the model can't understand the pattern between the data. 
+Models with lots of bias pay little attention to the training data causing them to output errors on both the test and training data. Simple models have a higher bias, and lower variance, as they tend to make more assumptions resulting in more difficulty to find the patterns. This leads to underfitting which usually occurs in these scenarios where the model can't understand the pattern between the data. 
+Ex. causing high bias: A system is used to screen job new applicants using past historical data and creates assumptions between them, not properly understanding the training data. This can lead to discrimination against certain genders and races who haven't been treated right in the past while preventing them from giving them jobs.
 ### Variance
-Variance is the variability of data and predictions. Models with high variance overfit, get trained so much that the model can't learn independently(Testing data), causing them to do poorly on just the testing data.
+Variance is the variability of data and predictions. Complex models have high variance, and low bias since they are sensitive to the training data. These Models with high variance overfit by getting trained so much that the model can't learn independently(Testing data), causing them to do poorly on just the testing data.
 ## The Tradeoff
 A model can either have high bias and low variance or vice versa. This results in a tradeoff between the two factors. Finding the perfect mix between the two factors, results in a highly accurate model and prevents overfitting/underfitting. A trade-off is necessary for a model to be successful and there are many other such tradeoffs like this.
+### Model Complexity
+Model complexity is the ability of a model to capture relationships in a given set of data. Linear regression used on non-linear functions would be difficult to figure out a pattern as the graphs are completely different. For non-linear relationships, more complex models should be used like Polynomial regression. Increasing model complexity can also result in overfitting as the model won't be able to learn on its own and create relationships.
+### Regularization
+Regularization techniques are used to prevent overfitting, underfitting, and control model complexity. It can control a linear regression model by penalizing coefficients that aren't important to the prediction. This reduces the variance meaning it stops overfitting. On the other hand, it also increases model bias meaning the model can't capture relationships between variables. This causes the trade-off between bias and variance for your overall goal of minimizing loss and error.
 ![image](https://github.com/MrCarry123/intro-to-data-science/assets/116237341/36a4932d-9211-45be-a534-96645115a5b3)
